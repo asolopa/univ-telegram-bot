@@ -1,0 +1,29 @@
+jasypt:
+  encryptor:
+    algorithm: PBEWithMD5AndDES
+    iv-generator-classname: org.jasypt.iv.NoIvGenerator
+
+openweathermap:
+  token: ENC(jpY1Xl0FdLO3Xgw9qNmH73DsD3qWgVfQElBqDUeOL/ZckMvv0Q/akNFrfJ8LEJZq)
+
+server:
+  port: 8888
+
+spring:
+  datasource:
+    driverClassName: org.h2.Driver
+    password: password
+    url: jdbc:h2:mem:telegrambot;DB_CLOSE_ON_EXIT=true
+    username: root
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: drop-and-create
+
+telegram:
+  bot:
+    token: ENC(BbwzPMO8PPLZYaJCwsONlmJ7GlcOB4KFb9btWaDym3IsggH2/2b3c9aceyLWZGCciO97u7PLg3E=)
+    username: JavaDepBot
