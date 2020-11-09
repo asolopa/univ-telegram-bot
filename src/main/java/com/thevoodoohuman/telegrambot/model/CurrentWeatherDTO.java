@@ -7,7 +7,9 @@ import lombok.experimental.FieldDefaults;
 
 import java.util.ArrayList;
 import java.util.Map;
-
+/**
+ * @author asolopa
+ */
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class CurrentWeatherDTO {

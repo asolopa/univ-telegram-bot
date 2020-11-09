@@ -9,6 +9,9 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardMar
 
 import java.net.http.HttpClient;
 
+/**
+ * @author asolopa
+ */
 @Configuration
 @RequiredArgsConstructor
 @EnableEncryptableProperties

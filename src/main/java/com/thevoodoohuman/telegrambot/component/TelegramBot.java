@@ -1,5 +1,8 @@
 package com.thevoodoohuman.telegrambot.component;
 
+/**
+ * @author a.solopa
+ */
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.thevoodoohuman.telegrambot.service.OtherTelegramUpdateService;
 import com.thevoodoohuman.telegrambot.service.StartTelegramUpdateService;
@@ -12,6 +15,9 @@ import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
+/**
+ * @author asolopa
+ */
 @Getter
 @Component
 @RequiredArgsConstructor

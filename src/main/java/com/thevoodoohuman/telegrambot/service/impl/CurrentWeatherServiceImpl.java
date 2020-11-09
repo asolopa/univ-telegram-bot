@@ -12,7 +12,9 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-
+/**
+ * @author asolopa
+ */
 @Service
 @RequiredArgsConstructor
 public class CurrentWeatherServiceImpl implements CurrentWeatherService {

@@ -4,7 +4,9 @@ import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.KeyboardRow;
-
+/**
+ * @author asolopa
+ */
 @Component
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class CustomWeatherKeyboard {
