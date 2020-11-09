@@ -1,6 +1,7 @@
 package com.thevoodoohuman.telegrambot;
 
 import com.thevoodoohuman.telegrambot.component.CustomTelegramKeyboard;
+import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -10,6 +11,7 @@ import java.net.http.HttpClient;
 
 @Configuration
 @RequiredArgsConstructor
+@EnableEncryptableProperties
 public class BeansConfiguration {
     private final CustomTelegramKeyboard customTelegramKeyboard;
 
