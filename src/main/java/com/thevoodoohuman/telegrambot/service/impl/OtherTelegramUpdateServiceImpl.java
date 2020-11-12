@@ -39,9 +39,9 @@ public class OtherTelegramUpdateServiceImpl implements OtherTelegramUpdateServic
         if (location != null) {
             sendMessage.enableMarkdownV2(true);
             String separator = System.lineSeparator();
-            String replyMessage = "Спасибо, текущий прогноз:" + separator + separator + "```" + separator;
+            String replyMessage = "Спасибо, текущий прогноз:" + separator + "```" + separator;
             CurrentWeatherDTO currentcurrentWeather = currentWeatherService.getCurrentForecast(location.getLongitude(), location.getLatitude());
-            replyMessage += "Обзор: " + currentcurrentWeather.getSky() + separator;
+            replyMessage += "General: " + currentcurrentWeather.getSky() + separator;
             replyMessage += "Температура: " + currentcurrentWeather.getTemperature() + separator;
             replyMessage += "Температура ощущается как: " + currentcurrentWeather.getTemperatureFeelsLike() + separator;
             replyMessage += "Температура мин: " + currentcurrentWeather.getTemperatureMin() + separator;
