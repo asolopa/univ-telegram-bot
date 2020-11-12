@@ -40,17 +40,17 @@ public class OtherTelegramUpdateServiceImpl implements OtherTelegramUpdateServic
             sendMessage.enableMarkdownV2(true);
             String separator = System.lineSeparator();
             String replyMessage = "Спасибо, текущий прогноз:" + separator + separator + "```" + separator;
-            CurrentWeatherDTO currentForecast = currentWeatherService.getCurrentForecast(location.getLongitude(), location.getLatitude());
-            replyMessage += "Обзор: " + currentForecast.getSky() + separator;
-            replyMessage += "Температура: " + currentForecast.getTemperature() + separator;
-            replyMessage += "Температура ощущается как: " + currentForecast.getTemperatureFeelsLike() + separator;
-            replyMessage += "Температура мин: " + currentForecast.getTemperatureMin() + separator;
-            replyMessage += "Температура макс: " + currentForecast.getTemperatureMax() + separator;
-            replyMessage += "Давление: " + currentForecast.getPressure() + separator;
-            replyMessage += "Влажность: " + currentForecast.getHumidity() + separator;
-            replyMessage += "Видимость: " + currentForecast.getVisibility() + separator;
-            replyMessage += "Страна: " + currentForecast.getCountry() + separator;
-            replyMessage += "Область: " + currentForecast.getCityName() + separator;
+            CurrentWeatherDTO currentcurrentWeather = currentWeatherService.getCurrentForecast(location.getLongitude(), location.getLatitude());
+            replyMessage += "Обзор: " + currentcurrentWeather.getSky() + separator;
+            replyMessage += "Температура: " + currentcurrentWeather.getTemperature() + separator;
+            replyMessage += "Температура ощущается как: " + currentcurrentWeather.getTemperatureFeelsLike() + separator;
+            replyMessage += "Температура мин: " + currentcurrentWeather.getTemperatureMin() + separator;
+            replyMessage += "Температура макс: " + currentcurrentWeather.getTemperatureMax() + separator;
+            replyMessage += "Давление: " + currentcurrentWeather.getPressure() + separator;
+            replyMessage += "Влажность: " + currentcurrentWeather.getHumidity() + separator;
+            replyMessage += "Видимость: " + currentcurrentWeather.getVisibility() + separator;
+            replyMessage += "Страна: " + currentcurrentWeather.getCountry() + separator;
+            replyMessage += "Область: " + currentcurrentWeather.getCityName() + separator;
             return replyMessage + "```";
         } else {
             return "Поделитесь своими кординатами..✨";
