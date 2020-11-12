@@ -8,8 +8,6 @@ build:maven:
   stage: build
   tags:
     - build
-  before_script:
-    - apt update > /dev/null && apt install -y git > /dev/null
   script:
     - mvn clean package -Djasypt.encryptor.password=${JASYPT_ENCRYPTOR_PASSWORD}
   artifacts:
