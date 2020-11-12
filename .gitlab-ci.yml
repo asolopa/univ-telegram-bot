@@ -29,7 +29,7 @@ package:docker:
   dependencies:
     - 'build:maven'
   artifacts:
-    name: $SERVER_NAME
+    name: $CI_COMMIT_REF_NAME
     expire_in: 120 mins
     paths:
       - telegram-bot.tar
