@@ -25,7 +25,7 @@ package:docker:
     - docker
   script:
     - docker build --build-arg JASYPT_ENCRYPTOR_PASSWORD=${JASYPT_ENCRYPTOR_PASSWORD} -t telegram-bot:$CI_COMMIT_REF_NAME .
-    - docker save unifun-gateway:$CI_COMMIT_REF_NAME > telegram-bot.tar
+    - docker save telegram-bot:$CI_COMMIT_REF_NAME > telegram-bot.tar
   dependencies:
     - 'build:maven'
   artifacts:
