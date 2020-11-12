@@ -18,16 +18,14 @@ build:maven:
     paths:
       - target/telegrambot-0.0.1-SNAPSHOT.jar
       
-package:docker: 
+package:docker:
   image: docker:stable
   stage: docker
   tags:
     - docker
   script:
-    #- docker build -t localhost:5000/unifun-gateway:$SERVER_NAME .
-    #- docker push localhost:5000/docker-build-test:$SERVER_NAME
-    - docker build -t telegram-bot:$CI_COMMIT_REF_NAME .
-    - docker save unifun-gateway:$SERVER_NAME > telegram-bot.tar
+    - docker build --build-arg JASYPT_ENCRYPTOR_PASSWORD=${JASYPT_ENCRYPTOR_PASSWORD} -t telegram-bot:$CI_COMMIT_REF_NAME .
+    - docker save unifun-gateway:$CI_COMMIT_REF_NAME > telegram-bot.tar
   dependencies:
     - 'build:maven'
   artifacts:
